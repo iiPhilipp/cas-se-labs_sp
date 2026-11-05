@@ -302,7 +302,7 @@ Der Azure-Block darunter zeigt noch `[todo]`, die Anmeldung folgt im nächsten A
 
 **Was schiefgehen kann**
 
-- `[FAIL] docker`: Die Umgebung wurde ohne Docker-Daemon gestartet. **F1 → Rebuild Container** behebt das.
+- `[FAIL] docker`: Der Docker-Daemon läuft nicht. Meist behebt **F1 → Rebuild Container** das. Bleibt der Fehler, zeigt `tail /tmp/dockerd.log` die Ursache. Diese Zeilen gehören in die Mail.
 - `[FAIL] docker-run`: Das Netzwerk lässt den Download des Testimages nicht zu, etwa in einem Firmen- oder Hotel-WLAN oder hinter einem Proxy. Ein anderes Netz hilft. Im Codespace kommt das selten vor.
 - `[FAIL] dotnet-run` oder ein anderes Werkzeug: Der Aufbau war unvollständig. Meist hilft **Rebuild Container**, sonst eine Mail mit der Fehlerzeile.
 
